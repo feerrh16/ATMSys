@@ -1,23 +1,36 @@
-11:09:38 PM: DEBUG [logger_base.py: 12] Mensaje a nivel debug
-11:09:38 PM: INFO [logger_base.py: 13] Mensaje a nivel info
-11:09:38 PM: WARNING [logger_base.py: 14] Mensaje a nivel warning
-11:09:38 PM: ERROR [logger_base.py: 15] Mensaje a nivel error
-11:09:38 PM: CRITICAL [logger_base.py: 16] Mensaje a nivel crítico
-11:10:39 PM: DEBUG [Conexion.py: 29] Creación exitosa del pool de conexiones: <psycopg2.pool.SimpleConnectionPool object at 0x000001A1E1A825A0>
-11:10:39 PM: DEBUG [Conexion.py: 40] Conexion obtenida del pool: <connection object at 0x000001A1E1D9E130; dsn: 'user=postgres password=xxx dbname=ATMSys host=127.0.0.1 port=5432', closed: 0>
-11:10:39 PM: DEBUG [Conexion.py: 46] Conexión regresada al pool de conexiones: <connection object at 0x000001A1E1D9E130; dsn: 'user=postgres password=xxx dbname=ATMSys host=127.0.0.1 port=5432', closed: 0>
-11:10:39 PM: DEBUG [Conexion.py: 40] Conexion obtenida del pool: <connection object at 0x000001A1E1D9E130; dsn: 'user=postgres password=xxx dbname=ATMSys host=127.0.0.1 port=5432', closed: 0>
-11:10:39 PM: DEBUG [Conexion.py: 40] Conexion obtenida del pool: <connection object at 0x000001A1E1D9E240; dsn: 'user=postgres password=xxx dbname=ATMSys host=127.0.0.1 port=5432', closed: 0>
-11:10:39 PM: DEBUG [Conexion.py: 46] Conexión regresada al pool de conexiones: <connection object at 0x000001A1E1D9E240; dsn: 'user=postgres password=xxx dbname=ATMSys host=127.0.0.1 port=5432', closed: 0>
-11:10:39 PM: DEBUG [Conexion.py: 40] Conexion obtenida del pool: <connection object at 0x000001A1E1D9E240; dsn: 'user=postgres password=xxx dbname=ATMSys host=127.0.0.1 port=5432', closed: 0>
-11:10:39 PM: DEBUG [Conexion.py: 40] Conexion obtenida del pool: <connection object at 0x000001A1E1D9E350; dsn: 'user=postgres password=xxx dbname=ATMSys host=127.0.0.1 port=5432', closed: 0>
-11:10:39 PM: DEBUG [Conexion.py: 46] Conexión regresada al pool de conexiones: <connection object at 0x000001A1E1D9E350; dsn: 'user=postgres password=xxx dbname=ATMSys host=127.0.0.1 port=5432', closed: 0>
-11:10:39 PM: DEBUG [Conexion.py: 40] Conexion obtenida del pool: <connection object at 0x000001A1E1D9E350; dsn: 'user=postgres password=xxx dbname=ATMSys host=127.0.0.1 port=5432', closed: 0>
-11:11:22 PM: DEBUG [cursor_del_pool.py: 10] Inicio del método with __enter__
-11:11:22 PM: DEBUG [Conexion.py: 29] Creación exitosa del pool de conexiones: <psycopg2.pool.SimpleConnectionPool object at 0x00000224245FF530>
-11:11:22 PM: DEBUG [Conexion.py: 40] Conexion obtenida del pool: <connection object at 0x0000022424596240; dsn: 'user=postgres password=xxx dbname=ATMSys host=127.0.0.1 port=5432', closed: 0>
-11:11:22 PM: DEBUG [cursor_del_pool.py: 28] Dentro del bloque with
-11:11:22 PM: DEBUG [cursor_del_pool.py: 30] [(1, Decimal('1000.00')), (2, Decimal('1500.50')), (3, Decimal('2000.75')), (4, Decimal('2500.00')), (5, Decimal('3000.25')), (6, Decimal('3500.50')), (7, Decimal('4000.75')), (8, Decimal('4500.00')), (9, Decimal('5000.25')), (10, Decimal('5500.50'))]
-11:11:22 PM: DEBUG [cursor_del_pool.py: 16] Se ejecuta el método __exit__
-11:11:22 PM: DEBUG [cursor_del_pool.py: 22] Commit de la transacción
-11:11:22 PM: DEBUG [Conexion.py: 46] Conexión regresada al pool de conexiones: <connection object at 0x0000022424596240; dsn: 'user=postgres password=xxx dbname=ATMSys host=127.0.0.1 port=5432', closed: 0>
+03:11:29 PM: DEBUG [logger_base.py: 12] Mensaje a nivel debug
+03:11:29 PM: INFO [logger_base.py: 13] Mensaje a nivel info
+03:11:29 PM: WARNING [logger_base.py: 14] Mensaje a nivel warning
+03:11:29 PM: ERROR [logger_base.py: 15] Mensaje a nivel error
+03:11:29 PM: CRITICAL [logger_base.py: 16] Mensaje a nivel crítico
+03:17:42 PM: DEBUG [Cliente.py: 50] 
+                ID: 1
+                Nombre: Edith
+                Apellido = Miramontes
+                
+03:19:30 PM: DEBUG [Cliente.py: 50] 
+                ID: 1
+                Nombre: Juan
+                Apellido = Pérez
+                
+03:19:30 PM: DEBUG [Cliente.py: 54] 
+                ID: None
+                Nombre: Edith
+                Apellido = Miramontes
+                
+03:20:11 PM: DEBUG [Cliente.py: 50] 
+                ID: 1
+                Nombre: Juan
+                Apellido = Pérez
+                
+03:20:11 PM: DEBUG [Cliente.py: 54] 
+                ID: 1
+                Nombre: Edith
+                Apellido = Miramontes
+                
+03:36:19 PM: DEBUG [Cuenta.py: 61] 
+                Número de cuenta: 1111-1111-1111-1111
+                Tarjeta número: 2345-5467-1234-2436
+                Vencimiento: 05/30
+                Saldo disponible= 2500
+                
