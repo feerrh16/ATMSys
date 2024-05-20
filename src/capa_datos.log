@@ -1,0 +1,24 @@
+09:45:48 PM: INFO
+[logger_base.py: 13]
+Mensaje a nivel info
+
+09:45:48 PM: WARNING
+[logger_base.py: 14]
+Mensaje a nivel warning
+
+09:45:48 PM: ERROR
+[logger_base.py: 15]
+Mensaje a nivel error
+
+09:45:48 PM: CRITICAL
+[logger_base.py: 16]
+Mensaje a nivel crítico
+
+09:55:31 PM: ERROR
+[CursorDelPool.py: 19]
+Ocurrió una excepción, rollback realizado:
+no existe la relación «usuario»
+LINE 1: SELECT * FROM usuario
+                      ^
+ <class 'psycopg2.errors.UndefinedTable'> <traceback object at 0x000001864EE80880>
+
