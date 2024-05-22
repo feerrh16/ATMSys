@@ -1,5 +1,5 @@
-from logger_base import *
-from Conexion import *
+from db_management.logger_base import *
+from db_management.Conexion import *
 
 class CursorDelPool:
     def __init__(self):

@@ -1,0 +1,170 @@
+03:11:29 PM: DEBUG [logger_base.py: 12] Mensaje a nivel debug
+03:11:29 PM: INFO [logger_base.py: 13] Mensaje a nivel info
+03:11:29 PM: WARNING [logger_base.py: 14] Mensaje a nivel warning
+03:11:29 PM: ERROR [logger_base.py: 15] Mensaje a nivel error
+03:11:29 PM: CRITICAL [logger_base.py: 16] Mensaje a nivel crítico
+03:17:42 PM: DEBUG [Cliente.py: 50] 
+                ID: 1
+                Nombre: Edith
+                Apellido = Miramontes
+                
+03:19:30 PM: DEBUG [Cliente.py: 50] 
+                ID: 1
+                Nombre: Juan
+                Apellido = Pérez
+                
+03:19:30 PM: DEBUG [Cliente.py: 54] 
+                ID: None
+                Nombre: Edith
+                Apellido = Miramontes
+                
+03:20:11 PM: DEBUG [Cliente.py: 50] 
+                ID: 1
+                Nombre: Juan
+                Apellido = Pérez
+                
+03:20:11 PM: DEBUG [Cliente.py: 54] 
+                ID: 1
+                Nombre: Edith
+                Apellido = Miramontes
+                
+03:36:19 PM: DEBUG [Cuenta.py: 61] 
+                Número de cuenta: 1111-1111-1111-1111
+                Tarjeta número: 2345-5467-1234-2436
+                Vencimiento: 05/30
+                Saldo disponible= 2500
+                
+03:49:44 PM: DEBUG [Cliente.py: 43] 
+                ID: 1
+                Nombre: Juan
+                Apellido = Pérez
+                
+03:50:23 PM: DEBUG [Cliente.py: 43] 
+                ID: 1
+                Nombre: Juan
+                Apellido = Pérez
+                
+03:50:23 PM: DEBUG [Cliente.py: 46] 
+                ID: 1
+                Nombre: Juan
+                Apellido = Pérez
+                
+03:50:36 PM: DEBUG [Cliente.py: 43] 
+                ID: 1
+                Nombre: Juan
+                Apellido = Pérez
+                
+03:50:36 PM: DEBUG [Cliente.py: 46] 
+                ID: 11
+                Nombre: German
+                Apellido = Sánchez
+                
+03:59:56 PM: DEBUG [cursor_del_pool.py: 10] Inicio del método with __enter__
+03:59:56 PM: DEBUG [Conexion.py: 29] Creación exitosa del pool de conexiones: <psycopg2.pool.SimpleConnectionPool object at 0x0000021152D2B950>
+03:59:56 PM: DEBUG [Conexion.py: 40] Conexion obtenida del pool: <connection object at 0x0000021154C26350; dsn: 'user=postgres password=xxx dbname=ATMSys host=127.0.0.1 port=5432', closed: 0>
+03:59:56 PM: DEBUG [ClienteDAO.py: 28] Registro insertado en la base de datos: 
+                ID: None
+                Nombre: Alejandra
+                Apellido = Téllez
+                
+03:59:56 PM: DEBUG [cursor_del_pool.py: 16] Se ejecuta el método __exit__
+03:59:56 PM: DEBUG [cursor_del_pool.py: 22] Commit de la transacción
+03:59:56 PM: DEBUG [Conexion.py: 46] Conexión regresada al pool de conexiones: <connection object at 0x0000021154C26350; dsn: 'user=postgres password=xxx dbname=ATMSys host=127.0.0.1 port=5432', closed: 0>
+03:59:56 PM: DEBUG [ClienteDAO.py: 51] Registro insertado en la base de datos: 1
+03:59:56 PM: DEBUG [cursor_del_pool.py: 10] Inicio del método with __enter__
+03:59:56 PM: DEBUG [Conexion.py: 40] Conexion obtenida del pool: <connection object at 0x0000021154C26350; dsn: 'user=postgres password=xxx dbname=ATMSys host=127.0.0.1 port=5432', closed: 0>
+03:59:56 PM: DEBUG [cursor_del_pool.py: 16] Se ejecuta el método __exit__
+03:59:56 PM: ERROR [cursor_del_pool.py: 19] Ocurrió una excepción, rollback realizado: no existe la relación «cliete»
+LINE 1: SELECT * FROM cliete ORDER BY id_cliente
+                      ^
+ <class 'psycopg2.errors.UndefinedTable'> <traceback object at 0x0000021154CBA2C0>
+03:59:56 PM: DEBUG [Conexion.py: 46] Conexión regresada al pool de conexiones: <connection object at 0x0000021154C26350; dsn: 'user=postgres password=xxx dbname=ATMSys host=127.0.0.1 port=5432', closed: 0>
+04:00:34 PM: DEBUG [cursor_del_pool.py: 10] Inicio del método with __enter__
+04:00:34 PM: DEBUG [Conexion.py: 29] Creación exitosa del pool de conexiones: <psycopg2.pool.SimpleConnectionPool object at 0x0000012C4BD8B950>
+04:00:34 PM: DEBUG [Conexion.py: 40] Conexion obtenida del pool: <connection object at 0x0000012C4DCB6350; dsn: 'user=postgres password=xxx dbname=ATMSys host=127.0.0.1 port=5432', closed: 0>
+04:00:34 PM: DEBUG [ClienteDAO.py: 28] Registro insertado en la base de datos: 
+                ID: None
+                Nombre: Alejandra
+                Apellido = Téllez
+                
+04:00:34 PM: DEBUG [cursor_del_pool.py: 16] Se ejecuta el método __exit__
+04:00:34 PM: DEBUG [cursor_del_pool.py: 22] Commit de la transacción
+04:00:34 PM: DEBUG [Conexion.py: 46] Conexión regresada al pool de conexiones: <connection object at 0x0000012C4DCB6350; dsn: 'user=postgres password=xxx dbname=ATMSys host=127.0.0.1 port=5432', closed: 0>
+04:00:34 PM: DEBUG [ClienteDAO.py: 51] Registro insertado en la base de datos: 1
+04:00:34 PM: DEBUG [cursor_del_pool.py: 10] Inicio del método with __enter__
+04:00:34 PM: DEBUG [Conexion.py: 40] Conexion obtenida del pool: <connection object at 0x0000012C4DCB6350; dsn: 'user=postgres password=xxx dbname=ATMSys host=127.0.0.1 port=5432', closed: 0>
+04:00:34 PM: DEBUG [cursor_del_pool.py: 16] Se ejecuta el método __exit__
+04:00:34 PM: DEBUG [cursor_del_pool.py: 22] Commit de la transacción
+04:00:34 PM: DEBUG [Conexion.py: 46] Conexión regresada al pool de conexiones: <connection object at 0x0000012C4DCB6350; dsn: 'user=postgres password=xxx dbname=ATMSys host=127.0.0.1 port=5432', closed: 0>
+04:00:34 PM: DEBUG [ClienteDAO.py: 56] 
+                ID: 1
+                Nombre: Juan
+                Apellido = Pérez
+                
+04:00:34 PM: DEBUG [ClienteDAO.py: 56] 
+                ID: 2
+                Nombre: Ana
+                Apellido = Gómez
+                
+04:00:34 PM: DEBUG [ClienteDAO.py: 56] 
+                ID: 3
+                Nombre: Luis
+                Apellido = Martínez
+                
+04:00:34 PM: DEBUG [ClienteDAO.py: 56] 
+                ID: 4
+                Nombre: María
+                Apellido = Rodríguez
+                
+04:00:34 PM: DEBUG [ClienteDAO.py: 56] 
+                ID: 5
+                Nombre: Carlos
+                Apellido = López
+                
+04:00:34 PM: DEBUG [ClienteDAO.py: 56] 
+                ID: 6
+                Nombre: Lucía
+                Apellido = Fernández
+                
+04:00:34 PM: DEBUG [ClienteDAO.py: 56] 
+                ID: 7
+                Nombre: José
+                Apellido = García
+                
+04:00:34 PM: DEBUG [ClienteDAO.py: 56] 
+                ID: 8
+                Nombre: Elena
+                Apellido = Sánchez
+                
+04:00:34 PM: DEBUG [ClienteDAO.py: 56] 
+                ID: 9
+                Nombre: Pedro
+                Apellido = Martín
+                
+04:00:34 PM: DEBUG [ClienteDAO.py: 56] 
+                ID: 10
+                Nombre: Sofía
+                Apellido = Jiménez
+                
+04:00:34 PM: DEBUG [ClienteDAO.py: 56] 
+                ID: 11
+                Nombre: Alejandra
+                Apellido = Téllez
+                
+04:00:34 PM: DEBUG [ClienteDAO.py: 56] 
+                ID: 12
+                Nombre: Alejandra
+                Apellido = Téllez
+                
+04:23:32 PM: DEBUG [cursor_del_pool.py: 10] Inicio del método with __enter__
+04:23:32 PM: DEBUG [Conexion.py: 29] Creación exitosa del pool de conexiones: <psycopg2.pool.SimpleConnectionPool object at 0x00000125140A63F0>
+04:23:32 PM: DEBUG [Conexion.py: 40] Conexion obtenida del pool: <connection object at 0x00000125140AA460; dsn: 'user=postgres password=xxx dbname=ATMSys host=127.0.0.1 port=5432', closed: 0>
+04:23:32 PM: DEBUG [cursor_del_pool.py: 16] Se ejecuta el método __exit__
+04:23:32 PM: ERROR [cursor_del_pool.py: 19] Ocurrió una excepción, rollback realizado: maximum recursion depth exceeded <class 'RecursionError'> <traceback object at 0x00000125141AD740>
+04:23:32 PM: DEBUG [Conexion.py: 46] Conexión regresada al pool de conexiones: <connection object at 0x00000125140AA460; dsn: 'user=postgres password=xxx dbname=ATMSys host=127.0.0.1 port=5432', closed: 0>
+04:25:38 PM: DEBUG [cursor_del_pool.py: 10] Inicio del método with __enter__
+04:25:38 PM: DEBUG [Conexion.py: 29] Creación exitosa del pool de conexiones: <psycopg2.pool.SimpleConnectionPool object at 0x00000237E9AEB950>
+04:25:38 PM: DEBUG [Conexion.py: 40] Conexion obtenida del pool: <connection object at 0x00000237EB982460; dsn: 'user=postgres password=xxx dbname=ATMSys host=127.0.0.1 port=5432', closed: 0>
+04:25:38 PM: DEBUG [cursor_del_pool.py: 16] Se ejecuta el método __exit__
+04:25:38 PM: ERROR [cursor_del_pool.py: 19] Ocurrió una excepción, rollback realizado: maximum recursion depth exceeded <class 'RecursionError'> <traceback object at 0x00000237EBA47C80>
+04:25:38 PM: DEBUG [Conexion.py: 46] Conexión regresada al pool de conexiones: <connection object at 0x00000237EB982460; dsn: 'user=postgres password=xxx dbname=ATMSys host=127.0.0.1 port=5432', closed: 0>

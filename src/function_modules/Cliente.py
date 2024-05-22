@@ -1,5 +1,5 @@
-from logger_base import *
-from cifrado import *
+from db_management.logger_base import *
+from security.cifrado import *
 
 class Cliente:
     def __init__(self, id_persona = None, nombre = None, apellido = None):
@@ -41,3 +41,6 @@ class Cliente:
 if __name__ == '__main__':
     cliente1 = Cliente(1, 'Juan', 'Pérez')
     log.debug(cliente1)
+
+    cliente2 = Cliente(11, 'German', 'Sánchez')
+    log.debug(cliente2)

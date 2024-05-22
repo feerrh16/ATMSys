@@ -1,6 +1,6 @@
 import sys
 from psycopg2 import pool
-from logger_base import *
+from db_management.logger_base import *
 
 class Conexion:
     _DATABASE = 'ATMSys'
