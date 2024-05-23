@@ -14,9 +14,21 @@ def mostrar_menu():
     print("7. Salir")
 
 def iniciar_sesion():
+    cliente_dao = ClienteDAO()
+    num_cliente = int(input("Ingrese su numero de cliente: "))
 
+    clientes = ClienteDAO.seleccionar()
+    cliente_encontrado = None
 
-    pass
+    for cliente in clientes:
+        if cliente.id_persona == num_cliente:
+            cliente_encontrado = cliente
+        break
+
+    if cliente_encontrado:
+        print(f"Bienvenido {cliente_encontrado.nombre} {cliente_encontrado.apellido}")
+    else:
+        print("Cliente no encontrado")
 
 def realizar_retiro(usuario):
 
