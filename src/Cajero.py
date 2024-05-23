@@ -3,6 +3,7 @@ from CajeroDAO import *
 from logger_base import *
 from cifrado import *
 
+
 class Cajero:
     def __init__(self, id_cajero = None, saldo  = None):
         self._id_cajero = id_cajero
