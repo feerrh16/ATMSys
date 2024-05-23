@@ -168,3 +168,19 @@ LINE 1: SELECT * FROM cliete ORDER BY id_cliente
 04:25:38 PM: DEBUG [cursor_del_pool.py: 16] Se ejecuta el método __exit__
 04:25:38 PM: ERROR [cursor_del_pool.py: 19] Ocurrió una excepción, rollback realizado: maximum recursion depth exceeded <class 'RecursionError'> <traceback object at 0x00000237EBA47C80>
 04:25:38 PM: DEBUG [Conexion.py: 46] Conexión regresada al pool de conexiones: <connection object at 0x00000237EB982460; dsn: 'user=postgres password=xxx dbname=ATMSys host=127.0.0.1 port=5432', closed: 0>
+09:47:57 PM: DEBUG [Cajero.py: 40] 
+                Cajero: 1
+                Saldo: 50000       # Sea Saldo el dinero disponible en el cajero.
+                
+09:47:57 PM: DEBUG [Cajero.py: 43] 
+                Cajero: 11
+                Saldo: 34875.65       # Sea Saldo el dinero disponible en el cajero.
+                
+09:48:14 PM: DEBUG [Cajero.py: 40] 
+                Cajero: 1
+                Saldo: 50000
+                
+09:48:14 PM: DEBUG [Cajero.py: 43] 
+                Cajero: 11
+                Saldo: 34875.65
+                

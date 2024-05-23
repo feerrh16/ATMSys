@@ -15,7 +15,7 @@ class Cajero:
     def __str__(self):
         return  f'''
                 Cajero: {self._id_cajero}
-                Saldo: {self._saldo}       # Sea Saldo el dinero disponible en el cajero.
+                Saldo: {self._saldo}
                 '''
     
     @property
