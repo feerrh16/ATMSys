@@ -10,10 +10,10 @@ Básicamente tenemos dos clases:
         (Definidas debajo).
 """
 
-from db_management.logger_base import *
-from function_modules.Cliente import *
-from db_management.Conexion import *
-from db_management.cursor_del_pool import *
+from logger_base import *
+from Cliente import *
+from Conexion import *
+from cursor_del_pool import *
 
 class ClienteDAO:
     _SELECCIONAR = 'SELECT * FROM cliente ORDER BY id_cliente'

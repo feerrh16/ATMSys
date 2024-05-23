@@ -1,0 +1,7 @@
+{
+    "python.analysis.extraPaths": [
+        "./src/function_modules",
+        "./src/db_management",
+        "./src/security"
+    ]
+}

@@ -1,4 +1,4 @@
-from db_management.logger_base import *
+from logger_base import *
 
 class Cuenta:
     def __init__(self, num_cuenta = None, num_debito = None, saldo = None, vencimiento = None, nip = None):

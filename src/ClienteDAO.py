@@ -5,18 +5,23 @@ uno o más dispositivos de almacenamiento de datos, tales como una Base de datos
 un archivo.
 
 Básicamente tenemos dos clases:
-    1.  Transacciones.py - Creación del objeto
-    2.  TransaccionesDAO.py - Conversión del objeto en una consulta a la base de datos
+    1.  Cliente.py - Creación del objeto
+    2.  ClienteDAO.py - Conversión del objeto en una consulta a la base de datos
         (Definidas debajo).
 """
 
+import sys
+sys.path.append('ATMSys-1/src/DAO')
+sys.path.append('ATMSys-1/src/db_management')
+sys.path.append('ATMSys-1/src/function_models')
+sys.path.append('ATMSys-1/src/security')
 from logger_base import *
-from Transacciones import *
+from Cliente import *
 from Conexion import *
 from cursor_del_pool import *
 
 class ClienteDAO:
-    _SELECCIONAR = 'SELECT * FROM transacciones ORDER BY id_transaccion'
+    _SELECCIONAR = 'SELECT * FROM cliente ORDER BY id_cliente'
     _INSERTAR = 'INSERT INTO cliente(nombre, apellido) VALUES(%s, %s)'
     _ACTUALIZAR = 'UPDATE cliente SET nombre = %s, apellido = %s WHERE id_persona = %s'
     _BORRAR = 'DELETE FROM persona WHERE id_persona = %s'
@@ -55,7 +60,8 @@ class ClienteDAO:
             cursor.execute(cls._BORRAR, valores)
             log.debug(f'Registro eliminado: {cliente}')
             return cursor.rowcount
-
+        
+# Módulo de pruebas para el módulo.
 if __name__ == '__main__':
     # Insertar un registro
     cliente1 = Cliente(nombre = 'Alejandra', apellido = 'Téllez')

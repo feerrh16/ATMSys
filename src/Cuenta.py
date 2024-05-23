@@ -1,8 +1,13 @@
+import sys
+sys.path.append('ATMSys-1/src/DAO')
+sys.path.append('ATMSys-1/src/db_management')
+sys.path.append('ATMSys-1/src/function_models')
+sys.path.append('ATMSys-1/src/security')
 from logger_base import *
 
 class Cuenta:
-    def __init__(self, ID_Transaccion = None, num_debito = None, saldo = None, vencimiento = None, nip = None):
-        self._id_transaccion = ID_Transaccion
+    def __init__(self, num_cuenta = None, num_debito = None, saldo = None, vencimiento = None, nip = None):
+        self._num_cuenta = num_cuenta
         self._num_debito = num_debito
         self._saldo = saldo
         self._vencimiento = vencimiento
