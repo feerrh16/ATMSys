@@ -5,6 +5,19 @@ sys.path.append('ATMSys-1/src/function_models')
 sys.path.append('ATMSys-1/src/security')
 from logger_base import *
 
+
+class Movimiento:
+    def __init__(self, id_movimiento, num_debito, tipo_movimiento, monto, fecha):
+        self.id_movimiento = id_movimiento
+        self.num_debito = num_debito
+        self.tipo_movimiento = tipo_movimiento
+        self.monto = monto
+        self.fecha = fecha
+
+    def __str__(self):
+        return f'Movimiento(id_movimiento={self.id_movimiento}, num_debito={self.num_debito}, tipo_movimiento={self.tipo_movimiento}, monto={self.monto}, fecha={self.fecha})'
+
+
 class Cuenta:
     def __init__(self, ID_Transaccion = None, num_debito = None, saldo = None, vencimiento = None, nip = None):
         self._id_transaccion = ID_Transaccion
@@ -20,7 +33,7 @@ class Cuenta:
                 Vencimiento: {self._vencimiento}
                 Saldo disponible= {self._saldo}
                 '''
-    
+
     @property
     def vencimiento(self):
         return self._vencimiento

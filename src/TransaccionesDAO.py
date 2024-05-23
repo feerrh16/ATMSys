@@ -11,6 +11,9 @@ Básicamente tenemos dos clases:
 """
 
 import sys
+
+from src.Cliente import Cliente
+
 sys.path.append('ATMSys-1/src/DAO')
 sys.path.append('ATMSys-1/src/db_management')
 sys.path.append('ATMSys-1/src/function_models')
@@ -19,6 +22,34 @@ from logger_base import *
 from Transacciones import *
 from Conexion import *
 from cursor_del_pool import *
+
+
+class TransaccionesDAO:
+    # Métodos anteriores...
+
+    @classmethod
+    def seleccionar_por_numero(cls, num_debito):
+        with CursorDelPool() as cursor:
+            query = 'SELECT * FROM transacciones WHERE num_debito = %s'
+            cursor.execute(query, (num_debito,))
+            registro = cursor.fetchone()
+            if registro:
+                return Cuenta(registro[0], registro[1], registro[2], registro[3], registro[4])
+            else:
+                return None
+
+    @classmethod
+    def seleccionar_movimientos_por_cuenta(cls, num_debito):
+        with CursorDelPool() as cursor:
+            query = 'SELECT * FROM movimientos WHERE num_debito = %s ORDER BY fecha DESC'
+            cursor.execute(query, (num_debito,))
+            registros = cursor.fetchall()
+            movimientos = []
+            for registro in registros:
+                movimiento = Movimiento(registro[0], registro[1], registro[2], registro[3], registro[4])
+                movimientos.append(movimiento)
+            return movimientos
+
 
 class ClienteDAO:
     _SELECCIONAR = 'SELECT * FROM transacciones ORDER BY id_transaccion'
@@ -60,6 +91,30 @@ class ClienteDAO:
             cursor.execute(cls._BORRAR, valores)
             log.debug(f'Registro eliminado: {cliente}')
             return cursor.rowcount
+
+    @classmethod
+    def seleccionar_por_numero(cls, num_debito):
+        with CursorDelPool() as cursor:
+            query = 'SELECT * FROM transacciones WHERE num_debito = %s'
+            cursor.execute(query, (num_debito,))
+            registro = cursor.fetchone()
+            if registro:
+                return Cuenta(registro[0], registro[1], registro[2], registro[3], registro[4])
+            else:
+                return None
+
+    @classmethod
+    def seleccionar_movimientos_por_cuenta(cls, num_debito):
+        with CursorDelPool() as cursor:
+            query = 'SELECT * FROM movimientos WHERE num_debito = %s ORDER BY fecha DESC'
+            cursor.execute(query, (num_debito,))
+            registros = cursor.fetchall()
+            movimientos = []
+            for registro in registros:
+                movimiento = Movimiento(registro[0], registro[1], registro[2], registro[3], registro[4])
+                movimientos.append(movimiento)
+            return movimientos
+
 
 if __name__ == '__main__':
     # Insertar un registro
