@@ -184,3 +184,11 @@ LINE 1: SELECT * FROM cliete ORDER BY id_cliente
                 Cajero: 11
                 Saldo: 34875.65
                 
+03:01:53 PM: DEBUG [Cajero.py: 40] 
+                Cajero: 1
+                Saldo: 50000
+                
+03:01:53 PM: DEBUG [Cajero.py: 43] 
+                Cajero: 11
+                Saldo: 34875.65
+                
