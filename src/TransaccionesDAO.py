@@ -12,14 +12,9 @@ Básicamente tenemos dos clases:
 
 import sys
 
-from src.Cliente import Cliente
-
-sys.path.append('ATMSys-1/src/DAO')
-sys.path.append('ATMSys-1/src/db_management')
-sys.path.append('ATMSys-1/src/function_models')
-sys.path.append('ATMSys-1/src/security')
+from Cliente import *
 from logger_base import *
-from Transacciones import *
+from Transacciones import Movimiento, Cuenta
 from Conexion import *
 from cursor_del_pool import *
 
