@@ -11,14 +11,13 @@ Básicamente tenemos dos clases:
 """
 
 from logger_base import *
-from TDC import *
 from Conexion import *
 from cursor_del_pool import *
 
 class TDCDAO:
     _SELECCIONAR = 'SELECT * FROM tarjeta_cto ORDER BY num_tarjeta'
     _INSERTAR = 'INSERT INTO tarjeta_cto(num_tarjeta, num_cuenta, nip, saldo_actual, a_pagar, fecha_vencimiento) VALUES(%s, %s, %s, %s, %s, %s)'
-    _ACTUALIZAR = 'UPDATE tarjeta_cto SET num_tarjeta = %s, num_cuenta = %s, nip = %s, saldo_actual = %s, a_pagar = %s, fecha_vencimiento = %s WHERE num_tarjeta = %s'
+    _ACTUALIZAR = 'UPDATE tarjeta_cto SET num_tarjeta = %s, num_cuenta = %s, nip = %s, saldfacebook.como_actual = %s, a_pagar = %s, fecha_vencimiento = %s WHERE num_tarjeta = %s'
     _BORRAR = 'DELETE FROM tarjeta_cto WHERE num_tarjeta = %s'
 
     @classmethod
@@ -35,7 +34,7 @@ class TDCDAO:
     @classmethod
     def insertar(cls, tarjeta_cto):
         with CursorDelPool() as cursor:
-            valores = (tarjeta_cto.num_cuenta, tarjeta_cto.num_cuenta, tarjeta_cto.nip, tarjeta_cto.saldo_actual, tarjeta_cto.a_pagar, tarjeta_cto.fecha_vencimiento)
+            valores = (tarjeta_cto.num_tarjeta, tarjeta_cto.num_cuenta, tarjeta_cto.nip, tarjeta_cto.saldo_actual, tarjeta_cto.a_pagar, tarjeta_cto.fecha_vencimiento)
             cursor.execute(cls._INSERTAR, valores)
             log.debug(f'Registro insertado en la base de datos: {tarjeta_cto}')
             return cursor.rowcount
@@ -59,6 +58,7 @@ class TDCDAO:
 # Módulo de pruebas para el módulo.
 if __name__ == '__main__':
     # Insertar un registro
+    from TDC import TDC
     tdc1 = TDC(11, 11, 5678, 5400, 160000, "12/06/24")
     tarjetas_insertadas = TDCDAO.insertar(tdc1)
     log.debug(f'Registro insertado en la base de datos: {tarjetas_insertadas}')
